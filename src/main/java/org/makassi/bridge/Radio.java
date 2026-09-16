@@ -4,12 +4,12 @@ public class Radio extends Device {
 
     @Override
     public void increaseVolume() {
-        System.out.println( this.getClass().getName() + "Volume +");
+        System.out.println(this.getClass().getSimpleName() + " Volume +");
     }
 
     @Override
     public void decreaseVolume() {
-        System.out.println( this.getClass().getName() + "Volume -");
+        System.out.println(this.getClass().getSimpleName() + " Volume -");
     }
 
 }

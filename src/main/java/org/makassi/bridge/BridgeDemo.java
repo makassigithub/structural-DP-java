@@ -2,11 +2,11 @@ package org.makassi.bridge;
 
 public class BridgeDemo {
     public static void main(String[] args) {
-        Device TvDevice = new Tv();
-        Device RadioDevice = new Radio();
+        Device tvDevice = new Television();
+        Device radioDevice = new Radio();
 
-        RemoteControl tvControl = new RemoteControl(TvDevice);
-        RemoteControl radioControl = new RemoteControl(RadioDevice);
+        RemoteControl tvControl = new RemoteControl(tvDevice);
+        RemoteControl radioControl = new RemoteControl(radioDevice);
 
         // Getting initial state for devices
         System.out.println(tvControl.getDeviceState());
@@ -26,5 +26,9 @@ public class BridgeDemo {
 
         System.out.println(tvControl.getDeviceState());
         System.out.println(radioControl.getDeviceState());
+
+        // RefinedAbstraction: extra behavior on top of the same Device implementors
+        AdvancedRemoteControl advancedTvControl = new AdvancedRemoteControl(tvDevice);
+        advancedTvControl.mute();
     }
 }

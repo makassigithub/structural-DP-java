@@ -1,7 +1,7 @@
 package org.makassi.bridge;
 
 public class RemoteControl {
-    private final Device device;
+    protected final Device device;
 
     public RemoteControl(Device device) {
         this.device = device;
